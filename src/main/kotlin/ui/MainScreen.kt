@@ -99,6 +99,7 @@ fun MainScreen(programText: String, onProgramTextChanged: (String) -> Unit) {
                         BasicTextField(
                             modifier = Modifier.fillMaxHeight().verticalScroll(state),
                             value = programText,
+                            textStyle = LocalTextStyle.current,
                             onValueChange = { onProgramTextChanged(it.uppercase(Locale.getDefault())) },
                             decorationBox = {
                                 Row(
